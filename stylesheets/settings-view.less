@@ -1,0 +1,132 @@
+@import "octicon-mixins";
+@import "ui-variables";
+
+//@text-color: #fff;
+//@text-color-subtle: #ddd;
+
+.settings-view {
+  .btn-default,
+  .btn-group > .btn-default {
+    background: @var-Color-grey--dark;
+    color: @text-color;
+    border: 1px solid @var-Color-grey--dark;
+
+    &:hover {
+      color: @text-color;
+      box-shadow: 0 0 2px rgb(255,255,255, .4)
+      background: @var-Color-grey--dark;
+      border: 1px solid @var-Color-grey--dark;
+    }
+  }
+
+
+  .btn {
+    box-shadow: none;
+  }
+
+  .text {
+    color: @text-color;
+  }
+
+  .text-subtle {
+    color: @text-color-subtle;
+  }
+
+  .error-message {
+
+    .error-details {
+      background: #F7F7F9;
+      border: 1px solid #E1E1E8;
+    }
+  }
+
+	.editor-container {
+
+    .editor.mini,
+    .editor.mini.is-focused {
+      color: @text-color;
+      background-color: #fff;
+
+      .cursor {
+        border-color: #000;
+      }
+
+      .selection .region {
+        background-color: rgba(0, 0, 0, .2);
+      }
+    }
+  }
+
+  section .section-heading:first-child,
+  .section .section-heading:first-child {
+    border-bottom: 1px solid #858585;
+    color: #262626;
+  }
+
+  .link {
+    color: @var-Color-turquoise;
+
+    &:hover, &:focus {
+      color: darken(@var-Color-turquoise, 10%);
+    }
+  }
+
+  .config-menu {
+    box-shadow: none;
+    background-color: @var-Color-grey--background;
+
+    .atom-banner {
+      background-image: url(atom://settings-view/images/atom.png);
+    }
+
+    .panels-menu {
+      .panel-menu-separator {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+
+
+    .nav > li > a {
+      color: #434343;
+    }
+
+    .nav > li.active > a {
+      background-color: darken(@var-Color-turquoise, 10%);
+      color: #f0f0f0;
+    }
+  }
+
+  .panels {
+    //background-color: #f2f2f2;
+  }
+
+  .packages {
+
+    .available-package-view {
+
+      .package-status {
+
+        &.icon-cloud-download {
+          color: #428bca;
+        }
+
+        &.icon-check {
+          color: #6CC644;
+        }
+
+        &.icon-alert {
+          color: #BD2C00;
+        }
+      }
+    }
+  }
+
+
+  .copy-icon {
+    &:hover {
+      color: #2a6496;
+    }
+  }
+
+
+}
